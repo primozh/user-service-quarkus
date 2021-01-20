@@ -1,22 +1,21 @@
 package si.hrovat.reactive
 
+import si.hrovat.reactive.boundary.resources.responses.ResponseData
+import si.hrovat.reactive.boundary.resources.responses.UserAttributes
 import java.util.*
 import javax.enterprise.context.RequestScoped
 
 @RequestScoped
 class UserServiceImpl : UserService {
 
-    override fun listUsers(page: Long, size: Long): DataList {
+    override fun listUsers(page: Long, size: Long): List<ResponseData> {
 
-        val users =
-            listOf(ResponseData(1, UUID.randomUUID(), "user", UserAttributes("primoz", "primoz")))
-
-        return DataList(users)
+        return listOf(ResponseData(1, UUID.randomUUID(), "user", UserAttributes("primoz", "primoz")))
     }
 
-    override fun getUser(id: String): Data {
+    override fun getUser(id: String): ResponseData {
 
-        return Data(ResponseData(1, UUID.randomUUID(), "user", UserAttributes("primoz", "primoz")))
+        return ResponseData(1, UUID.randomUUID(), "user", UserAttributes("primoz", "primoz"))
     }
 
 
@@ -24,7 +23,7 @@ class UserServiceImpl : UserService {
 
 interface UserService {
 
-    fun listUsers(page: Long, size: Long): DataList
+    fun listUsers(page: Long, size: Long): List<ResponseData>
 
-    fun getUser(id: String): Data
+    fun getUser(id: String): ResponseData
 }
