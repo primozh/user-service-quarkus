@@ -1,3 +1,5 @@
 package si.hrovat.reactive.boundary.resources.requests
 
-class GenericRequest()
+import java.util.*
+
+data class CreateUserRequest(val id: UUID, val username: String, val password: String)

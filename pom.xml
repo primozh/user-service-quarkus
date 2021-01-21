@@ -9,8 +9,8 @@
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <kotlin.version>1.4.21</kotlin.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>15</maven.compiler.source>
+    <maven.compiler.target>15</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <quarkus-plugin.version>1.11.0.Final</quarkus-plugin.version>
@@ -61,6 +61,10 @@
       <groupId>io.rest-assured</groupId>
       <artifactId>kotlin-extensions</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-openapi</artifactId>
     </dependency>
   </dependencies>
   <build>
