@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tables
+      author: Primoz Hrovat
+      changes:
+        - sqlFile:
+            dbms: 'postgresql'
+            path: src/main/resources/db/migrations/sql/create_user_table.sql
